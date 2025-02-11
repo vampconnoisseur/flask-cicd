@@ -917,7 +917,7 @@ async def test_route():
     """
     A simple test route to check if the API is working.
     """
-    return {"message": "Test route is working!"}
+    return {"message": "Test route is obviously working!"}
 
 
 if __name__ == "__main__":

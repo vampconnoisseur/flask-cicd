@@ -1,6 +1,9 @@
 name: Provision EC2 and Deploy Flask
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -14,7 +17,7 @@ jobs:
     env:
       AWS_REGION: us-east-1
       DOCKER_HUB_REPO: vampconnoisseur/flask-server
-      IMAGE_TAG: ${{ github.run_id }}
+      IMAGE_TAG: ${{ github.run_number }}
       INSTANCE_NAME: flask-server
       CLIENT_NAME: jaiditya
     steps:
