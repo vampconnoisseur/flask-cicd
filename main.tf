@@ -55,8 +55,8 @@ resource "aws_instance" "flask_server" {
             sudo systemctl start docker
             sudo systemctl enable docker
 
-            sudo docker pull vampconnoisseur/flask-server:${image_tag}
-            sudo docker run -d -p 8765:8765 vampconnoisseur/flask-server:${image_tag}
+            sudo docker pull vampconnoisseur/flask-server:${var.image_tag}
+            sudo docker run -d -p 8765:8765 vampconnoisseur/flask-server:${var.image_tag}
   EOF
 
   tags = {
