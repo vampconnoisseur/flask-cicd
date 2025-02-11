@@ -67,3 +67,13 @@ resource "aws_instance" "flask_server" {
 output "public_ip" {
   value = aws_instance.flask_server.public_ip
 }
+
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "5.46.0"
+    }
+  }
+}
